@@ -9,7 +9,12 @@
          var gl = canvas.getContext('experimental-webgl');
 /*============ Определение и сохранение геометрии =========*/ 
 // Question: why only 2 coordinates for each vertice? Answer: 
-         var vertices = [-0.5, 0.5, -0.5, -0.5, 0.5, -0.5,0.5, -0.5, 0.5, 0.5, -0.5, 0.5,];
+         var vertices = [-0.5,  0.5, 
+			 -0.5, -0.5, 
+			  0.5, -0.5,
+			  0.5, -0.5, 
+			  0.5,  0.5, 
+			 -0.5,  0.5,];
 	      
     
 // Создаем пустой объект буфера для хранения буфера вершин (Create an empty buffer object to store vertex buffer)
