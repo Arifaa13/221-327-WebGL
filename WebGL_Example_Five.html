@@ -8,23 +8,23 @@
          var canvas = document.getElementById('my_Canvas');
          var gl = canvas.getContext('experimental-webgl');
 /*============ Определение и сохранение геометрии =========*/ 
-/*============ Question: why only 2 coordinates for each vertice? Answer: The number of coordinates you specify 
-for each vertex in your WebGL program is the 
-same as the number of vertices in your triangle. 
-This is because WebGL uses triangles to define shapes 
-and faces in its graphics pipeline. 
-Each vertex in a triangle has three coordinates, 
-one for each face that the triangle belongs to. 
-The order of the coordinates is important when rendering 
-a triangle, so the first vertex on the bottom 
-side of the triangle will be at the top left corner of the triangle, 
-while the last vertex on the top side will be at the bottom right corner.
+// Question: why only 2 coordinates for each vertice? Answer: The number of coordinates you specify 
+// for each vertex in your WebGL program is the 
+// same as the number of vertices in your triangle. 
+// This is because WebGL uses triangles to define shapes 
+// and faces in its graphics pipeline. 
+// Each vertex in a triangle has three coordinates, 
+// one for each face that the triangle belongs to. 
+// The order of the coordinates is important when rendering 
+// a triangle, so the first vertex on the bottom 
+// side of the triangle will be at the top left corner of the triangle, 
+// while the last vertex on the top side will be at the bottom right corner.
 
-If you wanted to create a triangle with four vertices, 
-you would need to specify four coordinates per vertex. 
-However, this might not be practical or efficient in terms of memory usage. 
-It's also possible that you may want to change the order of the vertices 
-later on if you want to implement additional features or transformations in your code. /*============
+// If you wanted to create a triangle with four vertices, 
+// you would need to specify four coordinates per vertex. 
+// However, this might not be practical or efficient in terms of memory usage. 
+// It's also possible that you may want to change the order of the vertices 
+// later on if you want to implement additional features or transformations in your code. 
          
 	 var vertices = [-0.5,  0.5, 
 			 -0.5, -0.5, 
