@@ -50,7 +50,11 @@
          var vertCode =
             'attribute vec2 coordinates;' + 
             'void main(void) {' + ' gl_Position = vec4(coordinates,0.0, 1.0);' + '}';
-
+// In the vertex shaders code we can use either vec2 or vec3 for setting coordinates
+// the number used here shows how long the vector is, which means how many coordinates we set for each vertex
+// and in the main function of the vertex shader code, we use vec4, which is a vector of 4 elements, 
+// where, as the first parameter, we pass that vector of coordinates and then, if vector has only 2 values, 
+// we add 0 as the next parameter, which makes the figure flat
 // Создайте объект вершинного шейдера (Create a vertex shader object)
 
          var vertShader = gl.createShader(gl.VERTEX_SHADER);
@@ -127,6 +131,7 @@
 
 // Нарисуйте треугольник (Draw the triangle)
          gl.drawArrays(gl.TRIANGLES, 0, 6);
+	// 6 means the number of vertices we have to draw
 	      
       </script>
    </body>
